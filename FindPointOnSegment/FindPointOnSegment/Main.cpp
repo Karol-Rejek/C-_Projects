@@ -27,6 +27,28 @@ bool checkIsOnSegment(std::map<int, float> pointX, std::map<int, float> pointY)
 	}
 }
 
+char whatPoint(int index)
+{
+	switch (index)
+	{
+	case 1:
+		return 'A';
+		break;
+	case 2:
+		return 'B';
+		break;
+	case 3:
+		return 'C';
+		break;
+	case 4:
+		return 'D';
+		break;
+	default:
+
+		break;
+	}
+}
+
 int main()
 {
 	std::map<int, float> pointX;
@@ -34,7 +56,7 @@ int main()
 
 	for (int i = 0; i < 3; i++)
 	{
-		std::cout << "Podaj wspolzedne " << i << " punktu\n";
+		std::cout << "Podaj wspolzedne punktu: " << whatPoint(i + 1) << "\n";
 		std::cin >> pointX[i];
 		std::cin >> pointY[i];
 		std::cout << "\n";
